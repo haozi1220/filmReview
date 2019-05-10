@@ -1,0 +1,5 @@
+<scroll-view scroll-y class='scroll_field'>
+  <view class='bgimg_wrap'>
+    <image class="bg_img" src="{{movieInfo.images.small}}"></image>
+  </view>
+</scroll-view>
