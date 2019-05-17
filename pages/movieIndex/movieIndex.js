@@ -2,7 +2,8 @@
 Page({
   data: {
     movieList:[],
-    currentId:''
+    currentId:'',
+    isShow: false
   },
   onLoad: function(){
     this.setData({
@@ -31,6 +32,15 @@ Page({
   // 获取电影列表方法
   getMovieData(url,dataObj={}){
     const _this = this;
+    wx.showLoading({
+      title: '小评玩命加载中...',
+      mask: true,
+      success: function(){
+        _this.setData({
+          isShow: true
+        })
+      }
+    })
     wx.request({
       url: url,
       data: dataObj || '',
@@ -38,8 +48,10 @@ Page({
         'content-type': 'json'
       },
       success(res) {
+        wx.hideLoading();
         _this.setData({
-          movieList: res.data.subjects
+          movieList: res.data.subjects,
+          isShow: false
         })
         // console.log(_this.data.movieList);
       }
@@ -49,7 +61,6 @@ Page({
   goMovieDetails(event){
     let itemId = event.currentTarget.dataset
     wx.navigateTo({
-      title: "goback",
       url: '../movieDetails/movieDetails?id='+itemId.url
     })
   }

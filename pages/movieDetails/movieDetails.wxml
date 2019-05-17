@@ -2,4 +2,64 @@
   <view class='bgimg_wrap'>
     <image class="bg_img" src="{{movieInfo.images.small}}"></image>
   </view>
+  <view class="movie_info_wrap">
+    <view class='movie_top'>
+      <view class='movie_title'>{{movieInfo.title}}</view>
+      <view class='movie_countries'>{{movieInfo.countries[0]}} ● {{movieInfo.year}}</view>
+    </view>
+    <view class="movie_tap_wrap" catchtap="tabInfo">
+      <view class="tap_item {{clickId == 'movieinfo' ? 'active' : ''}}" id="movieinfo">影片信息</view>
+      <view class="tap_item {{clickId == 'moviecomments' ? 'active' : ''}}" id="moviecomments">影片评论({{movieInfo.comments_count}})</view>
+    </view>
+    <view class="info_wrap">
+      <view class='tap_content' wx:if="{{clickId == 'movieinfo'}}">
+        <view class='top_img'>
+          <image src='{{movieInfo.images.small}}' class='movie_thumbnail' catchtap='previewImage' data-src="{{movieInfo.images.small}}"></image>
+          <view class='movie_info'>
+          <view class='movie_title'>{{movieInfo.original_title}}</view>
+            <view class='movie_genres'>分类：<text wx:for="{{movieInfo.genres}}" wx:key="{{index}}" wx:for-item="genres">{{genres}}<text wx:if="{{index < movieInfo.genres.length-1}}">/</text></text></view>
+            <view class='movie_average'>评分：{{movieInfo.rating.average}}</view>
+            <view class='movie_rating_wrap'>
+              <text><text class='red_font'>{{movieInfo.ratings_count}}</text>人评分</text>
+              <text><text class='red_font'>{{movieInfo.wish_count}}</text>人喜欢</text>
+            </view>
+          </view>
+        </view>
+        <view class='summary_wrap'>
+          <view class='summary_title'>剧情简介</view>
+          <view class='summary_content'>{{movieInfo.summary}}</view>
+        </view>
+        <view class='director_wrap'>
+          <view class='summary_title'>导  演</view>
+          <view class='director_list_wrap'>
+            <view class='director_item' wx:for="{{movieInfo.directors}}" wx:key="{{index}}" wx:for-item="directorInfo">
+              <image src='{{directorInfo.avatars.small}}' class='director_avatars'></image>
+              <text class='director_name'>{{directorInfo.name}}</text>
+            </view>
+          </view>
+        </view>
+        <view class='casts_wrap'>
+          <view class='summary_title'>影职员</view>
+          <view class='cast_list_wrap'>
+            <view class='cast_item' wx:for="{{movieInfo.casts}}" wx:key="{{index}}" wx:for-item="castInfo">
+              <image src='{{castInfo.avatars.small}}' class='cast_avatars'></image>
+              <text class='cast_name'>{{castInfo.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='tap_content' wx:if="{{clickId == 'moviecomments'}}" style='padding-left:0;padding-right:0;'>
+        <view class='field_title'>热门评论</view>
+        <view class='comments_item' wx:for="{{movieInfo.popular_comments}}" wx:for-item="commentItem" wx:key="{{commentItem.id}}">
+          <image class='user_avatar' src="{{commentItem.author.avatar}}"></image>
+          <view class='comments_wrap'>
+            <text class='user_name'>{{commentItem.author.name}}</text>
+            <text class='comments_time'>{{commentItem.created_at}}</text>
+            <text class='comments_useful'><text>{{commentItem.useful_count}}</text>有用</text>
+            <text class='comments_content'>{{commentItem.content}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </scroll-view>

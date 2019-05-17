@@ -4,7 +4,7 @@
     <view class="tab_bar_item {{currentId == 'living' ? 'active' : ''}}" id='living'>即将上映</view>
     <view class="tab_bar_item {{currentId == 'top' ? 'active' : ''}}" id='top'>top250</view>
   </view>
-  <scroll-view scroll-y class='scroll_field'>
+  <scroll-view scroll-y class='scroll_field' hidden='{{isShow}}'>
     <view class='movie_item' wx:for="{{movieList}}" wx:key="{{item.id}}" catchtap="goMovieDetails" data-url="{{item.id}}">
       <view class='movie_img_wrap'>
         <image src="{{item.images.small}}" class='movie_img'></image>
