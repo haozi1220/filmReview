@@ -1,4 +1,4 @@
-<scroll-view scroll-y class='scroll_field'>
+<scroll-view scroll-y class='scroll_field' hidden='{{pageIsShow}}'>
   <view class='bgimg_wrap'>
     <image class="bg_img" src="{{movieInfo.images.small}}"></image>
   </view>

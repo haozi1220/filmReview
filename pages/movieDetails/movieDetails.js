@@ -1,9 +1,20 @@
 Page({
   data: {
     movieInfo: {},
-    clickId: ""
+    clickId: "",
+    pageIsShow: false
   },
   onLoad:function(option){
+    let _this = this;
+    wx.showLoading({
+      title: '小评玩命加载中...',
+      mask: true,
+      success: function(){
+        _this.setData({
+          pageIsShow: true
+        })
+      }
+    })
     this.setData({
       clickId: 'movieinfo'
     })
@@ -16,8 +27,10 @@ Page({
       },
       success(res) {
         THIS.setData({
-          movieInfo:res.data
-        })
+          movieInfo:res.data,
+          pageIsShow: false
+        });
+        wx.hideLoading();
       }
     })
   },
