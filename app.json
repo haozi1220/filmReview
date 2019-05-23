@@ -2,6 +2,7 @@
   "pages": [
     "pages/movieIndex/movieIndex",
     "pages/movieDetails/movieDetails",
+    "pages/mine/mine",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -11,5 +12,23 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/movieIndex/movieIndex",
+        "iconPath": "images/graph_icon.png",
+        "selectedIconPath": "images/graph_act_icon.png",
+        "text": "影视"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine_icon.png",
+        "selectedIconPath": "images/mine_act_icon.png",
+        "text": "我的"
+      }
+    ],
+    "color": "#a6a6b0",
+    "selectedColor": "#0f6dec"
+  }
 }
