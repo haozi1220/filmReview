@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "影视列表"
+  "navigationBarTitleText": "影视列表",
+  "usingComponents": {
+    "filemlist-component": "/filemlist/filemlist-component"
+  }
 }

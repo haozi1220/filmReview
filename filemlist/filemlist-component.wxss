@@ -1,0 +1,45 @@
+/* filemlist/filemlist-component.wxss */
+.list_component {
+  width: 100%;
+}
+.movie_item {
+  display: flex;
+  position: relative;
+  box-shadow: 0 5rpx 10rpx #e6e6e6;
+  padding-top: 20rpx;
+  justify-content: flex-start;
+}
+.movie_img_wrap {
+  width: 180rpx;
+  height: 250rpx;
+}
+.movie_img_wrap .movie_img {
+  display: block;
+  width: 180rpx;
+  height: 100%;
+}
+.movie_info_wrapp {
+  padding-left: 10rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+.movie_director,
+.movie_actor_wrap {
+  width: 550rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.movie_rating {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+  width: 80rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #fff;
+  border-radius: 21rpx;
+  background: #87b2f8;
+}

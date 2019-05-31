@@ -4,27 +4,13 @@
     <view class="tab_bar_item {{currentId == 'living' ? 'active' : ''}}" id='living'>即将上映</view>
     <view class="tab_bar_item {{currentId == 'top' ? 'active' : ''}}" id='top'>top250</view>
   </view>
-  <scroll-view scroll-y class='scroll_field' hidden='{{isShow}}'>
-    <view class='movie_item' wx:for="{{movieList}}" wx:key="{{item.id}}" catchtap="goMovieDetails" data-url="{{item.id}}">
-      <view class='movie_img_wrap'>
-        <image src="{{item.images.small}}" class='movie_img'></image>
-      </view>
-      <view class='movie_info_wrapp'>
-        <view class='movie_title'>{{item.title}}</view>
-        <view class='movie_genres'>
-          <text>类型：</text><text wx:for="{{item.genres}}" wx:key="{{index}}" wx:for-item="movieGenres">{{movieGenres}} </text>
-        </view>
-        <view class='movie_director'>
-          <text>导演：</text><text wx:for="{{item.directors}}" wx:for-item="directorInfo" wx:key="{{directorInfo.id}}">{{directorInfo.name}} </text>
-        </view>
-        <view class='movie_actor_wrap'>
-          <text>主演：</text><text wx:for="{{item.casts}}" wx:for-item="movieActorInfo" wx:key="{{movieActorInfo.id}}">{{movieActorInfo.name}} </text>
-        </view>
-        <view class='movie_year_wrap'>
-          <text>{{item.year}}年作品</text>
-        </view>
-        <view class='movie_rating'>{{item.rating.average}}</view>
-      </view>
-    </view>
+  <scroll-view scroll-y class="scroll_field" hidden='{{isShow}}'
+    bindscrolltolower="tolower"
+    bindtouchstart='touchStart'
+    bindtouchend='touchEnd'
+    bindscroll = "scrollHandle"
+    lower-threshold="0">
+    <filemlist-component filem-data="{{movieList}}" bindmyevent = "onMyEvent" />
+    <view class="pullup_load">上拉加载更多</view>
   </scroll-view>
 </view>

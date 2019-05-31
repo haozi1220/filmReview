@@ -3,7 +3,8 @@ Page({
   data: {
     movieList:[],
     currentId:'',
-    isShow: false
+    isShow: false,
+    initState: 0
   },
   onLoad: function(){
     this.setData({
@@ -63,5 +64,31 @@ Page({
     wx.navigateTo({
       url: '../movieDetails/movieDetails?id='+itemId.url
     })
+  },
+  // scroll触底函数
+  tolower(){
+    console.log("滚动到底部才出发我");
+    this.setData({
+      initState: 1
+    })
+  },
+  scrollHandle(e){
+    this.setData({
+      // scrollTop: e.detail.scrollTop + 100
+    })
+    // console.log(e);
+  },
+  touchStart(e){
+    (this.data.initState == 1) && console.log(e);
+    // console.log(e);
+  },
+  touchEnd(e){
+    // console.log(e);
+    this.setData({
+      initState: 0
+    })
+  },
+  onMyEvent(e){
+    // console.log(e.detail);
   }
 })
