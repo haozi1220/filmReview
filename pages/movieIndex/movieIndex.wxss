@@ -2,6 +2,9 @@
 page, .movie_container {
   height: 100%;
 }
+.movie_container {
+  background-color: #e3e3e3;
+}
 .tab_bar_wrap {
   display: flex;
   justify-content: space-around;
@@ -22,7 +25,48 @@ page, .movie_container {
 .scroll_field {
   height: calc(100% - 60rpx);
   width: 100%;
+  position: relative;
+}
+.list_wrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 .pullup_load {
   height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 100rpx;
+}
+.load_text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #3d86fa;
+}
+.loader_img {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  animation: circle 1s infinite linear;
+}
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.upArrow {
+  display: inline-block;
+  height: 50rpx;
+  width: 20rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  transition: 0.2s;
+}
+.upArrow.pull-up {
+  transform: rotateZ(180deg);
+}
+.upArrow.pull-down {
+  transform: rotateZ(0deg);
 }

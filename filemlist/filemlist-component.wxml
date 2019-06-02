@@ -2,7 +2,7 @@
 <!-- catchtap="goMovieDetails" -->
 <!-- <text>filemlist/filemlist-component.wxml</text> -->
 <filemlist-component class="list_component">
-  <view class='movie_item' wx:for="{{filemData}}" bindtouchmove='touchMove' wx:key="{{item.id}}"  data-url="{{item.id}}">
+  <view class='movie_item' wx:for="{{filemData}}" wx:key="{{item.id}}"  data-url="{{item.id}}">
       <view class='movie_img_wrap'>
         <image src="{{item.images.small}}" class='movie_img'></image>
       </view>

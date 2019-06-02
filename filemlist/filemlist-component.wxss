@@ -5,9 +5,10 @@
 .movie_item {
   display: flex;
   position: relative;
-  box-shadow: 0 5rpx 10rpx #e6e6e6;
-  padding-top: 20rpx;
+  box-shadow: 0 5rpx 20rpx #534d4d;
+  margin-top: 20rpx;
   justify-content: flex-start;
+  background-color: #fff;
 }
 .movie_img_wrap {
   width: 180rpx;

@@ -4,13 +4,21 @@
     <view class="tab_bar_item {{currentId == 'living' ? 'active' : ''}}" id='living'>即将上映</view>
     <view class="tab_bar_item {{currentId == 'top' ? 'active' : ''}}" id='top'>top250</view>
   </view>
-  <scroll-view scroll-y class="scroll_field" hidden='{{isShow}}'
+  <scroll-view id="the-id" scroll-y class="scroll_field" hidden='{{isShow}}'
     bindscrolltolower="tolower"
     bindtouchstart='touchStart'
     bindtouchend='touchEnd'
-    bindscroll = "scrollHandle"
-    lower-threshold="0">
-    <filemlist-component filem-data="{{movieList}}" bindmyevent = "onMyEvent" />
-    <view class="pullup_load">上拉加载更多</view>
+    bindscroll= "scrollHandle"
+    lower-threshold="10">
+    <view class="list_wrap"  bindtouchmove="touchMove"
+          style="transform:translateY({{pullUpHeight}}px)"
+    >
+      <filemlist-component filem-data="{{movieList}}" />
+      <view class="pullup_load">
+        <image class="loader_img" src="../../images/loader.png" hidden="{{isShowLoad}}"></image>
+        <image class="upArrow pull-{{moveDirection}}" hidden="{{!isShowLoad}}" src="../../images/arrow.png"></image>
+        <text class="load_text">{{loadText}}</text>
+      </view>
+    </view>
   </scroll-view>
 </view>
