@@ -21,7 +21,7 @@ Page({
     let movieId = option.id;
     let THIS = this;
     wx.request({
-      url: `https://douban.uieee.com/v2/movie/subject/${movieId}`,
+      url: `https://douban.uieee.com/v2/movie/subject/${movieId }`,
       header: {
         'content-type': 'json'
       },

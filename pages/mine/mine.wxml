@@ -1,3 +1,28 @@
 <view class="mine_container">
-  
+  <view class="wrapView userInfoWrap">
+    <view class="avatarWrap">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="userInfoNick">
+      <text class="userNickName">{{userInfo.nickName}}</text>
+      <text class="userCity">{{userInfo.province}}●{{userInfo.city}}</text>
+    </view>
+  </view>
+  <view class="wrapView systemWrap">
+    <view class="systemInfo">
+      <image src="../../images/system_info.png"></image>
+      <text>系统信息</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+    <view class="systemInfo">
+      <image src="../../images/network_state.png"></image>
+      <text>系统信息</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+    <view class="systemInfo">
+      <image src="../../images/clear_storage.png"></image>
+      <text>清理缓存</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+  </view>
 </view>

@@ -21,9 +21,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    // touchMove(e){
+    tapEvent(e){
     //   // 触发父组件的事件，并传递数据
-    //   this.triggerEvent('myevent', e)
-    // }
+      this.triggerEvent('myevent', e)
+    }
   }
 })

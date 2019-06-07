@@ -26,6 +26,14 @@
           </view>
         </view>
         <view class='summary_wrap'>
+          <view class='summary_title'>精彩花絮</view>
+          <view class='blooper_content'>
+            <view wx:for="{{movieInfo.bloopers}}" wx:key="{{index}}" wx:for-item="blooperSrc" class='video_wrap'>
+              <video  src="{{blooperSrc.resource_url}}" controls poster="{{blooperSrc.small}}"></video>
+            </view>
+          </view>
+        </view>
+        <view class='summary_wrap'>
           <view class='summary_title'>剧情简介</view>
           <view class='summary_content'>{{movieInfo.summary}}</view>
         </view>

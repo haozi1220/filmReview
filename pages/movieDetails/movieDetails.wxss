@@ -92,6 +92,20 @@ page {
   margin-right: 0;
   color: #ee0f6c;
 }
+/* 花絮部分 */
+.blooper_content {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.video_wrap {
+  width: 300rpx;
+  padding: 10rpx;
+  display: inline-block;
+}
+.video_wrap video {
+  width: 100%;
+  height: 200rpx;
+}
 /* 剧情简介部分 */
 .summary_wrap {
   padding-top: 20rpx;

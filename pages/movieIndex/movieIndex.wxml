@@ -5,15 +5,12 @@
     <view class="tab_bar_item {{currentId == 'top' ? 'active' : ''}}" id='top'>top250</view>
   </view>
   <scroll-view id="the-id" scroll-y class="scroll_field" hidden='{{isShow}}'
-    bindscrolltolower="tolower"
-    bindtouchstart='touchStart'
     bindtouchend='touchEnd'
-    bindscroll= "scrollHandle"
-    lower-threshold="10">
-    <view class="list_wrap"  bindtouchmove="touchMove"
-          style="transform:translateY({{pullUpHeight}}px)"
-    >
-      <filemlist-component filem-data="{{movieList}}" />
+    bindscrolltolower="tolower"
+    scroll-top="{{scrollTop}}"
+    lower-threshold="5">
+    <view class="list_wrap">
+      <filemlist-component filem-data="{{movieList}}" bind:myevent="goMovieDetails"/>
       <view class="pullup_load">
         <image class="loader_img" src="../../images/loader.png" hidden="{{isShowLoad}}"></image>
         <image class="upArrow pull-{{moveDirection}}" hidden="{{!isShowLoad}}" src="../../images/arrow.png"></image>
