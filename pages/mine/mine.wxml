@@ -9,19 +9,41 @@
     </view>
   </view>
   <view class="wrapView systemWrap">
-    <view class="systemInfo">
+    <view class="systemInfo"  catchtap="goSystemInfo">
       <image src="../../images/system_info.png"></image>
       <text>系统信息</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
-    <view class="systemInfo">
+    <view class="systemInfo" catchtap="getNetWorkState">
       <image src="../../images/network_state.png"></image>
-      <text>系统信息</text>
+      <text>网络状态</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+    <view class="systemInfo" catchtap="clearStorage">
+      <image src="../../images/clear_storage.png"></image>
+      <text>清理缓存</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+  </view>
+  <view class="wrapView systemWrap">
+    <view class="systemInfo" catchtap="checkAuthorInfo">
+      <image src="../../images/author_info.png"></image>
+      <text>作者信息</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
     <view class="systemInfo">
-      <image src="../../images/clear_storage.png"></image>
-      <text>清理缓存</text>
+      <image src="../../images/skill_label.png"></image>
+      <text>技能标签</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+    <view class="systemInfo">
+      <image src="../../images/telephone_icon.png"></image>
+      <text>联系作者</text>
+      <image class="right_icon" src='../../images/right_icon.png'></image>
+    </view>
+    <view class="systemInfo">
+      <image src="../../images/home_address.png"></image>
+      <text>作者位置</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
   </view>

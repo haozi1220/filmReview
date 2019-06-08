@@ -1,0 +1,36 @@
+<view class="systeminfo_container">
+  <view class="wrapView systemWrap">
+    <view class="systemInfo">
+      <text class="left_info">设备品牌</text>
+      <text class="right_info">{{systemInfo.brand}}</text>
+    </view>
+    <view class="systemInfo">
+      <text class="left_info">设备型号</text>
+      <text class="right_info">{{systemInfo.model}}</text>
+    </view>
+  </view>
+  <view class="wrapView systemWrap">
+    <view class="systemInfo">
+      <text class="left_info">微信版本</text>
+      <text class="right_info">{{systemInfo.version}}</text>
+    </view>
+    <view class="systemInfo">
+      <text class="left_info">操作系统版本</text>
+      <text class="right_info">{{systemInfo.system}}</text>
+    </view>
+    <view class="systemInfo">
+      <text class="left_info">客户端平台</text>
+      <text class="right_info">{{systemInfo.platform}}</text>
+    </view>
+  </view>
+  <view class="wrapView systemWrap">
+    <view class="systemInfo">
+      <text class="left_info">设备像素比</text>
+      <text class="right_info">{{systemInfo.pixelRatio}}</text>
+    </view>
+    <view class="systemInfo">
+      <text class="left_info">屏幕尺寸</text>
+      <text class="right_info">{{systemInfo.screenWidth}} × {{systemInfo.screenHeight}}</text>
+    </view>
+  </view>
+</view> 

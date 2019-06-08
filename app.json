@@ -4,6 +4,8 @@
     "pages/mine/mine",
     "pages/movieIndex/movieIndex",
     "pages/movieDetails/movieDetails",
+    "pages/systemInfo/systemInfo",
+    "pages/authorInfo/authorInfo",
     "pages/logs/logs"
   ],
   "window": {

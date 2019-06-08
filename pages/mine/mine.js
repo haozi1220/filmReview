@@ -16,53 +16,42 @@ Page({
       userInfo: app.globalData.userInfo
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
+  // 点击系统信息
+  goSystemInfo(){
+    wx.navigateTo({
+      url: '../systemInfo/systemInfo'
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
+  // 获取网络状态
+  getNetWorkState(){
+    wx.getNetworkType({
+      success: function(res) {
+        wx.showModal({
+          title: '当前网络',
+          content: res.networkType,
+          showCancel: false,
+          confirmColor: "#0f6dec"
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    
+  // 清理缓存
+  clearStorage(){
+    wx.showModal({
+      title: '温馨提示',
+      content: '确定要清理缓存',
+      confirmColor: "#0f6dec",
+      success(res){
+        if (res.confirm) {
+          wx.clearStorage();
+        }
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
+  // 查看作者信息
+  checkAuthorInfo(){
+    wx.navigateTo({
+      url: '../authorInfo/authorInfo',
+    })
   }
 })
