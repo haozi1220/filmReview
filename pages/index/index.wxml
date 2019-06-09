@@ -1,13 +1,12 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+    <view class="softeware_icon">
+      <image src="../../images/basicprofile.png" class="software_img"></image>
+    </view>
+    <view class="welcome_text">欢迎使用影小评</view>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <button class="user_motto" type="primary" catchtap="loginIn">进入影小评</button>
   </view>
 </view>

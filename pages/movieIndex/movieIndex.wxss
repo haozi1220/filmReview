@@ -32,7 +32,7 @@ page, .movie_container {
   top: 0;
   width: 100%;
 }
-.pullup_load {
+/* .pullup_load {
   height: 100rpx;
   text-align: center;
   font-size: 40rpx;
@@ -69,4 +69,4 @@ page, .movie_container {
 }
 .upArrow.pull-down {
   transform: rotateZ(0deg);
-}
+} */

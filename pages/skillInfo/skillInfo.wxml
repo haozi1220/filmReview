@@ -1,0 +1,24 @@
+<view class="skill_container">
+  <view class="skill_wrap">
+    <view class="skill_title">技能标签</view>
+    <view class="skill_item">
+      <text>Html(Html5)、</text>
+      <text>CSS(CSS3)、</text>
+      <text>Javascript、</text>
+      <text>Vue、</text>
+      <text>小程序、</text>
+      <text>Pug、</text>
+      <text>Webpack、</text>
+      <text>gulp</text>
+    </view>
+  </view>
+  <view class="job_intention">
+    <view class="job_title">求职意向</view>
+    <view class="job_item">
+      <text>web前端开发、</text>
+      <text>H5开发、</text>
+      <text>Vue开发、</text>
+      <text>小程序开发</text>
+    </view>
+  </view>
+</view>

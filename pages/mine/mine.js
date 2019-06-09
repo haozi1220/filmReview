@@ -53,5 +53,36 @@ Page({
     wx.navigateTo({
       url: '../authorInfo/authorInfo',
     })
+  },
+  // 技能标签
+  getSkillInfo(){
+    wx.navigateTo({
+      url: '../skillInfo/skillInfo'
+    })
+  },
+  // 拨打电话
+  makeCall(){
+    wx.showModal({
+      title: '温馨提示',
+      content: '是否拨打作者电话？',
+      confirmColor: "#0f6dec",
+      success(res){
+        if (res.confirm){
+          wx.makePhoneCall({
+            phoneNumber: '18514589705',
+          })
+        }
+      }
+    })
+  },
+  // 通信地址
+  checkAddress(){
+    wx.openLocation({
+      latitude: 39.85856,
+      longitude: 116.28616,
+      scale: 18,
+      name: '北京',
+      address: '北京市丰台区丰台东路育菲园东里'
+    })
   }
 })

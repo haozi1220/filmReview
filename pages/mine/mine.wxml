@@ -31,19 +31,19 @@
       <text>作者信息</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
-    <view class="systemInfo">
+    <view class="systemInfo" catchtap="getSkillInfo">
       <image src="../../images/skill_label.png"></image>
       <text>技能标签</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
-    <view class="systemInfo">
+    <view class="systemInfo" catchtap="makeCall">
       <image src="../../images/telephone_icon.png"></image>
       <text>联系作者</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
-    <view class="systemInfo">
+    <view class="systemInfo" catchtap="checkAddress">
       <image src="../../images/home_address.png"></image>
-      <text>作者位置</text>
+      <text>通信地址</text>
       <image class="right_icon" src='../../images/right_icon.png'></image>
     </view>
   </view>

@@ -1,0 +1,28 @@
+page {
+  height: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #e3e3e3;
+}
+.skill_container {
+  height: 100%;
+  padding: 160rpx 30rpx 0;
+  box-sizing: border-box;
+  box-shadow: 0 5rpx 20rpx #534d4d;
+  background-color: #fff;
+}
+.skill_title,
+.job_title {
+  font-size: 40rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.skill_item,
+.job_item {
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.job_intention {
+  margin-top: 90rpx;
+}

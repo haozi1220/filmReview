@@ -6,7 +6,7 @@
     "pages/movieDetails/movieDetails",
     "pages/systemInfo/systemInfo",
     "pages/authorInfo/authorInfo",
-    "pages/logs/logs"
+    "pages/skillInfo/skillInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

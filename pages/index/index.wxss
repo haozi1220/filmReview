@@ -4,18 +4,25 @@
   flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.softeware_icon {
+  width: 132rpx;
+  height: 132rpx;
 }
-
-.userinfo-nickname {
+.softeware_icon .software_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.welcome_text {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  line-height: 50rpx;
   color: #aaa;
 }
-
 .usermotto {
-  margin-top: 200px;
+  margin-top: 80rpx;
+}
+.usermotto .user_motto{
+  font-size: 38rpx;
+  line-height: 100rpx;
 }
