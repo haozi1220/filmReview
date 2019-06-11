@@ -12,8 +12,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo: app.globalData.userInfo
+    // 页面加载时检查是否已授权
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) { // 已经授权可以拿到用户信息
+          this.setData({
+            userInfo: app.globalData.userInfo
+          })
+        } else {
+          wx.showModal({
+            title: '温馨提示',
+            content: '您还进行授权，是否进行授权？',
+            success: res => {
+              if (res.confirm) {
+                wx.openSetting({
+                  
+                })
+              }
+            }
+          })
+        }
+      }
     })
   },
   // 点击系统信息

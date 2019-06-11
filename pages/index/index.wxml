@@ -7,6 +7,11 @@
     <view class="welcome_text">欢迎使用影小评</view>
   </view>
   <view class="usermotto">
-    <button class="user_motto" type="primary" catchtap="loginIn">进入影小评</button>
+    <button
+      class="user_motto"
+      type="primary"
+      bindgetuserinfo="loginIn"
+      open-type='getUserInfo'
+      lang='zh_CN'>进入影小评</button>
   </view>
 </view>

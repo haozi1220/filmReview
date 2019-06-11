@@ -4,44 +4,23 @@ const app = getApp()
 
 Page({
   data: {
+    canIUse:wx.canIUse('button.open-type.getUserInfo'),
     userInfo: {}
   },
   onLoad: function () {
-    wx.login({
-      success(res){
-        app.globalData.code = res.code;
-      }
-    })
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+    
+  },
+  loginIn(e){
+    if (e.detail.userInfo) { // 确定授权
+      app.globalData.userInfo = e.detail.userInfo;
+      wx.switchTab({
+        url: '../movieIndex/movieIndex',
       })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
+    } else {  // 决绝授权
+      wx.switchTab({
+        url: '../movieIndex/movieIndex',
       })
     }
-  },
-  loginIn(){
-    wx.switchTab({
-      url: '../movieIndex/movieIndex'
-    })
+
   }
 })
